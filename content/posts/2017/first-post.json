@@ -1,0 +1,12 @@
+{
+  "title": "First post",
+  "date": "2017-06-01T00:00:00.000Z",
+  "bodyContent": "First post!\n\nCheckout [github to see my other projects](github.com/tscanlin)\n\nWith code highlighting:\n\n```js\nconsole.log('Hello world!')\n```\n\n[another page](/custom-post)",
+  "bodyHtml": "<p>First post!</p>\n<p>Checkout <a href=\"github.com/tscanlin\">github to see my other projects</a></p>\n<p>With code highlighting:</p>\n<pre><code class=\"hljs\"><span class=\"hljs-built_in\">console</span>.log(<span class=\"hljs-string\">&#x27;Hello world!&#x27;</span>)</code></pre><p><a href=\"/custom-post\">another page</a></p>\n",
+  "preview": "First post!\n\nCheckout github to see my other projects\n\nWith code highlighting:\n\nconsole.log('Hello",
+  "dir": "content/posts/2017",
+  "base": "first-post.json",
+  "ext": ".json",
+  "sourceBase": "first-post.md",
+  "sourceExt": ".md"
+}
