@@ -32,5 +32,9 @@ module.exports = {
     return Object.assign({}, {
       '/': { page: '/' }
     }, posts, paths) // aliases
-  }
+  },
+  images: {
+    loader: 'akamai',
+    path: '',
+  },
 }

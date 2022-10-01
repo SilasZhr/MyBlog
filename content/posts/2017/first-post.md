@@ -1,16 +1,11 @@
 ---
 title: First post
-date: 2017-06-01
+date: 202-10-01
 ---
 
 First post!
 
-Checkout [github to see my other projects](github.com/tscanlin)
+Checkout [mirror to see my other projects](https://mirror.xyz/0xsilas.eth)
 
-With code highlighting:
-
-```js
-console.log('Hello world!')
-```
 
 [another page](/custom-post)

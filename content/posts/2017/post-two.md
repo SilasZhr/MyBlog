@@ -1,8 +1,8 @@
 ---
 title: Post two
-date: 2017-06-12
+date: 2022-10-01
 ---
 
 Second post!
 
-Check out [GitHub to see my other projects](https://github.com/tscanlin)
+Check out [GitHub to see my other projects](https://github.com/Silaszhr)
