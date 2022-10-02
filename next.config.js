@@ -1,40 +1,23 @@
-const SUMMARY_JSON = require('./content/summary.json')
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true'
+})
 
-module.exports = {
-  exportPathMap: function() {
-    const posts = {}
-    const paths = {}
-    SUMMARY_JSON.fileMap && Object.keys(SUMMARY_JSON.fileMap)
-      .forEach((file) => {
-        const fileObj = SUMMARY_JSON.fileMap[file]
-        const obj = {}
-        if (fileObj.paths) {
-          // Handle custom paths / aliases.
-          obj.page = '/post'
-          obj.query = {
-            fullUrl: file.match(/^content(.+)\.json$/)[1]
-          }
-          fileObj.paths.forEach((path) => {
-            paths[path] = obj
-          })
-        } else if (file.indexOf('content/posts') === 0) {
-          // Handle posts.
-          const page = file.split('content').join('').split('.json').join('')
-          posts[page] = {
-            page: '/post',
-            query: {
-              fullUrl: page
-            }
-          }
-        }
-      })
-
-    return Object.assign({}, {
-      '/': { page: '/' }
-    }, posts, paths) // aliases
-  },
+module.exports = withBundleAnalyzer({
+  staticPageGenerationTimeout: 300,
   images: {
-    loader: 'akamai',
-    path: '',
-  },
-}
+    unoptimized: true,
+    domains: [
+      'www.notion.so',
+      'notion.so',
+      'images.unsplash.com',
+      'pbs.twimg.com',
+      'abs.twimg.com',
+      's3.us-west-2.amazonaws.com',
+      'transitivebullsh.it'
+    ],
+    formats: ['image/avif', 'image/webp'],
+    dangerouslyAllowSVG: true,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;"
+  }
+})
